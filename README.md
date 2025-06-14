@@ -22,14 +22,6 @@
 
 ---
 
-## 📸 Ekran Görüntüsü
-
-<p align="center">
-  <img src="https://placehold.co/800x400?text=PostalCode+Uygulama+Görseli" alt="PostalCode Screenshot" width="700"/>
-</p>
-
----
-
 ## 🗂 Proje Yapısı
 
 ```
@@ -80,7 +72,3 @@ PostalCode/
 Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
 
 ---
-
-<p align="center">
-  <b>⭐ Projeyi beğendiysen yıldız vermeyi unutma!</b>
-</p>
