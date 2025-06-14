@@ -1,40 +1,86 @@
-# ETA PostalCode 🏷️
+# 📦 PostalCode
 
-**PostalCode**, adres girdisi yapıldığında ülke bazlı posta kodu doğrulaması yapan basit ve genişletilebilir bir C# .NET uygulamasıdır.
+![License](https://img.shields.io/github/license/dogukankosan/PostalCode)
+![Stars](https://img.shields.io/github/stars/dogukankosan/PostalCode)
+![Issues](https://img.shields.io/github/issues/dogukankosan/PostalCode)
+![Last Commit](https://img.shields.io/github/last-commit/dogukankosan/PostalCode)
+
+> **PostalCode**, adres yönetimi için şehir ve ilçe bazlı posta kodu seçimini kolaylaştıran, SQL veritabanı ve Excel dosyası destekli bir masaüstü C#/.NET uygulamasıdır.
 
 ---
 
 ## 🚀 Özellikler
 
-- 📍 **Ülke Bazlı Doğrulama**  
-  Türkiye, ABD, Kanada gibi farklı ülkeler için özelleştirilmiş posta kodu kuralları.
-
-- ✅ **Regex Tabanlı Kontrol**  
-  Her ülke için tanımlanmış regex desenleriyle doğrulama işlemi.
-
-- 🧩 **Modüler Mimari**  
-  Kolayca yeni ülke formatı veya doğrulama algoritması eklenebilir.
-
-- 🧪 **Test Edilebilirlik**  
-  Unit test desteği sayesinde sağlam altyapı.
+- 🗂 Şirket seçimi ile çoklu veritabanı desteği
+- 📋 Cari kart ve adresler üzerinde toplu işlem
+- 📊 Grid üzerinde adres ve posta kodu görüntüleme
+- 🏙 Şehir/ilçe/mahalle bazında posta kodu seçimi (Excel dosyasından)
+- ☑️ Seçilen posta kodunu tek tıkla kaydetme
+- 🌐 PTT resmi posta kodu sayfası entegrasyonu (WebView)
+- ⚡ Toplu güncelleme ve bilgi etiketleri
+- 🛠 DevExpress arayüz bileşenleri ile modern görünüm
 
 ---
 
+## 📸 Ekran Görüntüsü
+
+<p align="center">
+  <img src="https://placehold.co/800x400?text=PostalCode+Uygulama+Görseli" alt="PostalCode Screenshot" width="700"/>
+</p>
+
+---
+
+## 🗂 Proje Yapısı
+
+```
 PostalCode/
-├── PostalCode.Core/      # Temel doğrulama mantığı
-├── PostalCode.Data/      # Ülke bazlı regex verileri
-├── PostalCode.CLI/       # Komut satırı arayüzü
-├── PostalCode.API/       # (Opsiyonel) Web API desteği
-└── PostalCode.Tests/     # xUnit testleri
+├── CompanyChoose.cs      # Şirket (veritabanı) seçimi arayüzü
+├── Form1.cs             # Ana uygulama ekranı (adres, cari kart, posta kodu işlemleri)
+├── PostaKodlari.cs      # Şehir/ilçe/mahalle seçimi ve posta kodu (Excel'den okuma)
+├── database.txt         # SQL bağlantı bilgileri
+├── excellocation.txt    # Excel dosyası yolu
+└── ...                  # Diğer yardımcı dosya ve kaynaklar
+```
 
 ---
 
-📜 Lisans
-MIT Lisansı – detaylar için LICENSE dosyasına göz atabilirsiniz.
+## 🛠️ Kurulum & Çalıştırma
+
+1. **Projeyi Klonla:**
+   ```bash
+   git clone https://github.com/dogukankosan/PostalCode.git
+   cd PostalCode
+   ```
+
+2. **Bağlantıları Ayarla:**
+   - `database.txt` dosyasına SQL bağlantı cümleni yaz.
+   - `excellocation.txt` dosyasına Excel dosyasının yolunu ekle.
+
+3. **Projeyi Visual Studio ile aç ve çalıştır (`F5`):**
+   - İlk açılışta şirket (veritabanı) seçimi yap.
+   - Ana ekranda cari kart ve adresler listelenir.
+   - Grid'den bir satıra tıklayarak şehir ve ilçe seç, mahalle ve posta kodu listesini aç.
+   - Mahalleyi seçip posta kodunu kaydet, ister tek tek, ister topluca veritabanına işle.
 
 ---
 
-📬 İletişim
-Projenin sahibi: @dogukankosan
-Sorular için GitHub Issues kısmından yazabilirsin.
+## ⚡ Kullanım Senaryosu
 
+1. Uygulamayı başlat.
+2. Şirket (veritabanı) seçimini yap.
+3. Adresler/cari kartlar listelenir.
+4. Satıra tıkla → mahalle ve posta kodları açılır → seçim yap → otomatik kaydedilir.
+5. Toplu kayıt ve güncelleme işlemlerini kullanabilirsin.
+6. PTT web sayfasını uygulama içinden görüntüleyebilirsin.
+
+---
+
+## 📄 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+
+---
+
+<p align="center">
+  <b>⭐ Projeyi beğendiysen yıldız vermeyi unutma!</b>
+</p>
